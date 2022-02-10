@@ -1,0 +1,103 @@
+/* header */
+.header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.header .inner-header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.header .inner-header .nav {
+    flex: 0 1 1200px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+}
+.header .inner-header .nav .left-menu {
+    flex: 0 0 100px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: flex-start;
+}
+.header .inner-header .nav .left-menu span.menu {
+    background-color: #fcc;
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.header .inner-header .nav .left-menu span.menu:active + .gnb {
+    left: 0;
+}
+.header .inner-header .nav .left-menu .gnb {
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    left: -100%;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 30px;
+    transition: all 0.2s ease-in-out;
+    border-right: 1px solid;
+}
+.header .inner-header .nav .left-menu .gnb:hover {
+    left: 0;
+}
+.header .inner-header .nav .left-menu .gnb>ul {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+.header .inner-header .nav .left-menu .gnb>ul>li {
+    line-height: 30px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.header .inner-header .nav .left-menu .gnb>ul>li:hover {
+    background-color: #fcc;
+    color: #fff;
+}
+.header .inner-header .nav .left-menu .gnb>ul>li>a {
+    background-color: inherit;
+    color: inherit;
+}
+.header .inner-header .nav .left-menu .gnb>ul>li ul.sub {
+    display: none;
+}
+.header .inner-header .nav .left-menu .gnb>ul>li ul.sub>li {
+    background-color: inherit;
+    color: inherit;
+}
+.header .inner-header .nav .left-menu .gnb>ul>li ul.sub>li:hover {
+    background-color: #fff;
+    color: #000;
+}
+.header .inner-header .nav .left-menu .gnb>ul>li ul.sub>li>a {
+    background-color: inherit;
+    color: inherit;
+}
+.header .inner-header .nav .left-menu .gnb>ul>li:hover ul.sub {
+    display: block;
+}
+.header .inner-header .nav .left-menu h1.logo {
+    flex: 0 0 150px;
+    height: auto;
+    box-sizing: border-box;
+}
+.header .inner-header .nav .left-menu h1.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.header .inner-header .nav .right-menu {
+    flex: 0 0 100px;
+    /* border: 1px solid; */
+    background-color: #fcc;
+}
